@@ -20,4 +20,4 @@ class ComponentFollow(Component):
             player_transform = player.get_component(Transform)
 
             if self.transform is not None and player_transform is not None:
-                self.transform.position = pymunk.Vec2d(player_transform.position.x, player_transform.position.y)
+                self.transform.position = pymunk.Vec2d(320, player_transform.position.y)
