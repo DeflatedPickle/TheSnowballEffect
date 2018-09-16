@@ -13,7 +13,7 @@ class ComponentMove(Component):
 
         self.rigid = None
 
-        self.speed = 70
+        self.speed = 20
 
     def start(self):
         self.input = self.parent.scene.window.input_manager

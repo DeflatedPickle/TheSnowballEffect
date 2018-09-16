@@ -9,4 +9,4 @@ class PrefabTinyRock(GameObject):
     def __init__(self, scene):
         self.sprite = Sprite("src/resources/tiny_rock.png", Anchor.MIDDLE_CENTER)
 
-        GameObject.__init__(self, scene, f"Tree{len(scene.object_list)}", [Transform(), SpriteRenderer(self.sprite)], never_reload=True)
+        GameObject.__init__(self, scene, f"Tree{len(scene.object_list)}", [Transform(), SpriteRenderer(self.sprite, scene.window.get_layer_by_name("Rocks"))], never_reload=True)

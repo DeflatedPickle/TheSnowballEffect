@@ -9,4 +9,4 @@ class PrefabTileSnow(GameObject):
     def __init__(self, scene):
         self.sprite = Sprite("src/resources/tile/snow.png", Anchor.MIDDLE_CENTER)
 
-        GameObject.__init__(self, scene, f"Tree{len(scene.object_list)}", [Transform(), SpriteRenderer(self.sprite, 2)], never_reload=True)
+        GameObject.__init__(self, scene, f"Tree{len(scene.object_list)}", [Transform(), SpriteRenderer(self.sprite, scene.window.get_layer_by_name("Snow"), scale=2)], never_reload=True)

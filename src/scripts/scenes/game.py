@@ -14,7 +14,7 @@ from src.scripts.components.world_gen import ComponentWorldGen
 
 class SceneGame(Scene):
     def __init__(self, window):
-        Scene.__init__(self, window, pymunk.Vec2d(0, -1))
+        Scene.__init__(self, window, pymunk.Vec2d(0, -5), 0.3)
 
         self.world_gen = GameObject(self, "WorldGen", [ComponentWorldGen()])
 
@@ -22,5 +22,5 @@ class SceneGame(Scene):
                                                   ComponentFollow()])
 
         self.player_sprite = Sprite("src/resources/player/snowball.png", Anchor.MIDDLE_CENTER)
-        self.player = GameObject(self, "Player", [Transform(), SpriteRenderer(self.player_sprite), RigidBody(1, False, False),
+        self.player = GameObject(self, "Player", [Transform(), SpriteRenderer(self.player_sprite, self.window.get_layer_by_name("Player")), RigidBody(1, False, False),
                                                   ComponentMove()])
