@@ -14,7 +14,7 @@ from src.scripts.components.world_gen import ComponentWorldGen
 
 class SceneGame(Scene):
     def __init__(self, window):
-        Scene.__init__(self, window, pymunk.Vec2d(0, -7))
+        Scene.__init__(self, window, pymunk.Vec2d(0, -1))
 
         self.world_gen = GameObject(self, "WorldGen", [ComponentWorldGen()])
 
